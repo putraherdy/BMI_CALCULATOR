@@ -224,8 +224,10 @@ underm :
     call printf
     add esp, 4
     
-    fld qword [thinm]        
     fld qword [index]
+    fstp qword [indexum]
+    fld qword [thinm]        
+    fld qword [indexum]
     fsub                     ;thinm substract BMI  
     fstp qword [point]
     
@@ -274,7 +276,9 @@ exceedm :
     call printf
     add esp, 4
     
-    fld qword [index]      
+    fld qword [index]
+    fstp qword [indexem]
+    fld qword [indexem]
     fld qword [idealm]
     fsub                     ;BMI substract idealm
     fstp qword [point1]
@@ -338,8 +342,10 @@ underf :
     call printf
     add esp, 4
     
-    fld qword [thinf]
     fld qword [index]
+    fstp qword [indexuf]
+    fld qword [thinf]
+    fld qword [indexuf]
     fsub                     ;thinf substract BMI  
     fstp qword [point2]
     
@@ -389,6 +395,8 @@ exceedf :
     add esp, 4
     
     fld qword [index]
+    fstp qword [indexef]
+    fld qword [indexef]
     fld qword [idealf]
     fsub                     ;BMI substract idealf
     fstp qword [point3]
@@ -426,7 +434,9 @@ abundance :
     call printf
     add esp, 4
     
-    fld qword [index] 
+    fld qword [index]
+    fstp qword [indexab]
+    fld qword [indexab] 
     fld qword [over]
     fsub                     ;BMI substract over
     fstp qword [point4]
