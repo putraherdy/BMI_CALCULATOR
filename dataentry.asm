@@ -89,11 +89,11 @@ infant :
     mov eax, [sex]
     cmp eax, 1       ;sex of baby is male
     je functbaby
-    jl unclassified
+    jl unclassifiedbaby
     
     cmp eax, 2       ;sex of baby is female
     je functbaby
-    jg unclassified
+    jg unclassifiedbaby
     
 functbaby :  
     ;proceed to bayi.asm
@@ -221,6 +221,13 @@ agecycle :
     jmp gone
 
 ;********************Face the wrong sex entered***********************
+unclassifiedbaby :
+    ;wrong sex
+    push pertama6    ;sorry, your sex is unidentified. please enter either male or female
+    call printf
+    add esp, 4
+    jmp infant   ;reenter the sex
+
 unclassified :
     ;wrong sex
     push pertama6    ;sorry, your sex is unidentified. please enter either male or female
