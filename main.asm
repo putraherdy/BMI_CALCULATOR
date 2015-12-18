@@ -197,12 +197,12 @@ section .data
     
     ;const
     babyl dq 0.00
-    babyc dq 2.0
-    babyadd dq 4.0
-    babymonth dq 12.0
-    childrenc dq 2.0
-    childrenadd dq 8.0
-    teenagerc dq  0.9
+    babyc dq 2.00
+    babyadd dq 4.00
+    babymonth dq 12.00
+    childrenc dq 2.00
+    childrenadd dq 8.00
+    teenagerc dq  0.900
     teenagersub dq 100.00
     bmi dq 10000.00
 
@@ -245,6 +245,11 @@ section .bss
     point3 resq 100
     point4 resq 100
     index resq 100
+    indexef resq 100
+    indexem resq 100
+    indexuf resq 100
+    indexum resq 100
+    indexab resq 100
     
 section .text
     global main
