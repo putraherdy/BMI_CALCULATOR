@@ -19,15 +19,15 @@ babymale :
     call scanf       ;age of baby male is entered
     add esp, 8
     
-    fld qword [babymonth]
+    fld qword [babymonth] ;12.00
     fld qword [ageby]
     fcomip 
     ja high
     
-    fld qword [babyl]
+    fld qword [babyl]     ;0.00
     fld qword [ageby]
     fcomip 
-    jl lower
+    jb lower
     
     ;output of baby male
     push pertama11   ;************************
@@ -70,7 +70,7 @@ babyfemale :
     call scanf       ;age of baby female is entered
     add esp, 8
 
-    fld qword [babymonth]
+    fld qword [babymonth] ;12.00
     fld qword [ageby]
     fcomip 
     ja high
@@ -78,7 +78,7 @@ babyfemale :
     fld qword [babyl]
     fld qword [ageby]
     fcomip 
-    jl lower
+    jb lower
     
     ;output of baby female
     push pertama11   ;************************
